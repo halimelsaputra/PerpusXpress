@@ -1,70 +1,134 @@
+Berikut versi README yang sudah saya rapikan dan format dengan markdown agar lebih jelas dan terstruktur:
+
+---
+
 # PerpusExpress
 
 ## Nama & NIM
-[Nama Lengkap] - [NIM]
 
-## Deskripsi Aplikasi
-PerpusExpress adalah aplikasi manajemen perpustakaan digital yang dibangun menggunakan framework Laravel. Aplikasi ini menyediakan solusi komprehensif untuk mengelola perpustakaan dengan antarmuka yang intuitif dan fitur-fitur yang lengkap.
+**Halim Elsa Putra** - 2308107010062
 
-### Penjelasan Code
-Aplikasi ini dibangun menggunakan:
-- **Backend**: Laravel 10.x dengan PHP 8.1+
-- **Database**: MySQL/MariaDB
-- **Frontend**: Bootstrap 5, jQuery, DataTables
-- **Authentication**: Laravel Breeze
+---
 
-### User Interface
-Aplikasi memiliki beberapa halaman utama:
-1. **Dashboard**
-   - Tampilan utama dengan statistik perpustakaan
-   - Grafik peminjaman dan pengembalian
-   - Notifikasi peminjaman aktif
+## Deskripsi Website
 
-2. **Manajemen Buku**
-   - Daftar buku dengan fitur pencarian dan filter
-   - Form tambah/edit buku
-   - Detail buku dengan status ketersediaan
+PerpusExpress adalah website manajemen perpustakaan digital yang dibangun menggunakan framework Laravel. Website ini menyediakan solusi komprehensif untuk mengelola perpustakaan dengan antarmuka yang intuitif dan fitur lengkap.
 
-3. **Manajemen Peminjaman**
-   - Daftar peminjaman aktif
-   - Form peminjaman dan pengembalian
-   - Riwayat peminjaman
+---
 
-4. **Manajemen Pengguna**
-   - Daftar pengguna dengan role berbeda
-   - Form tambah/edit pengguna
-   - Profil pengguna
+## Teknologi yang Digunakan
+
+* **Backend:** Laravel 12.0 (PHP 8.2.12)
+* **Database:** MySQL
+* **Frontend:** Bootstrap, Tailwind CSS
+* **Authentication:** Laravel Breeze
+
+---
+
+## User Interface
+
+Aplikasi memiliki beberapa halaman utama sebagai berikut:
+
+1. **Halaman Autentikasi**
+
+   * Login
+   * Register
+   * Forgot Password
+   * Reset Password
+
+2. **Dashboard**
+
+   * Statistik perpustakaan
+   * Grafik peminjaman
+   * Notifikasi terbaru
+   * Quick actions
+
+3. **Manajemen Buku (Admin)**
+
+   * Daftar buku
+   * Tambah, edit, hapus buku
+   * Detail buku
+   * Pencarian dan filter buku
+
+4. **Manajemen Kategori (Admin)**
+
+   * Daftar kategori
+   * Tambah, edit, hapus kategori
+
+5. **Manajemen Peminjaman**
+
+   * Daftar peminjaman aktif
+   * Form peminjaman baru
+   * Form pengembalian
+   * Riwayat peminjaman
+   * Status peminjaman
+
+6. **Manajemen Pengguna**
+
+   * Daftar pengguna
+   * Tambah pengguna baru
+   * Edit profil
+   * Ganti password
+   * Manajemen role
+
+7. **Halaman User**
+
+   * Katalog buku
+   * Pencarian buku
+   * Riwayat peminjaman
+   * Daftar denda
+   * Reservasi buku
+
+8. **Laporan (Admin)**
+
+   * Laporan peminjaman
+   * Laporan denda
+   * Statistik perpustakaan
+   * Export data
+
+9. **Profil Pengguna**
+
+   * Informasi pribadi
+   * Riwayat aktivitas
+   * Pengaturan akun
+
+10. **Notifikasi**
+
+    * Notifikasi peminjaman
+    * Notifikasi pengembalian
+    * Notifikasi denda
+    * Notifikasi sistem
+
+---
 
 ## Cara Instalasi Aplikasi
 
-### 1. Persyaratan Sistem
-- PHP >= 8.1
-- Composer
-- MySQL/MariaDB
-- Node.js & NPM
-- Web Server (Apache/Nginx)
+### 1. Clone Repository
 
-### 2. Clone Repository
 ```bash
 git clone https://github.com/username/PerpusExpress.git
 cd PerpusExpress
 ```
 
-### 3. Install Dependencies
+### 2. Install Dependencies
+
 ```bash
 composer install
 npm install
 ```
 
-### 4. Setup Environment
+### 3. Setup Environment
+
 ```bash
 cp .env.example .env
 php artisan key:generate
 ```
 
-### 5. Konfigurasi Database
+### 4. Konfigurasi Database
+
 1. Buat database baru di MySQL
 2. Sesuaikan konfigurasi di file `.env`:
+
 ```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -74,94 +138,56 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
-### 6. Migrasi Database
+### 5. Migrasi Database
+
 ```bash
 php artisan migrate
 ```
 
-### 7. Seeding Data
+### 6. Seeding Data
+
 ```bash
 php artisan db:seed
 ```
 
-### 8. Compile Assets
+### 7. Compile Assets
+
 ```bash
 npm run dev
 ```
 
-### 9. Jalankan Server
+### 8. Jalankan Server
+
 ```bash
 php artisan serve
 ```
 
+---
+
 ## Kredensial Default
 
 ### Admin
-- Email: admin@perpus.com
-- Password: password
 
-### Petugas
-- Email: petugas@perpus.com
-- Password: password
-
-## Fitur Utama
-1. Manajemen Buku
-   - CRUD buku
-   - Kategorisasi
-   - Pencarian
-
-2. Manajemen Peminjaman
-   - Proses peminjaman
-   - Pengembalian
-   - Perhitungan denda
-
-3. Manajemen Pengguna
-   - Multi-level user
-   - Profil pengguna
-   - Riwayat aktivitas
-
-4. Laporan
-   - Laporan peminjaman
-   - Statistik perpustakaan
-   - Laporan denda
-
-## Struktur Database
-Aplikasi menggunakan beberapa tabel utama:
-- users
-- books
-- categories
-- borrowings
-- fines
-- book_status
-
-## Kontribusi
-Kontribusi selalu diterima! Berikut cara untuk berkontribusi:
-1. Fork repository
-2. Buat branch baru
-3. Commit perubahan
-4. Push ke branch
-5. Buat Pull Request
-
-## Lisensi
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
-
-## 📱 Fitur Keamanan
-
-- Autentikasi multi-level
-- Password hashing
-- CSRF protection
-- XSS protection
-- SQL injection prevention
-- Session management
-
-## 👨‍💻 Pengembang
-
-- [Nama Pengembang](https://github.com/username)
-
-## 🙏 Ucapan Terima Kasih
-
-Terima kasih kepada semua kontributor yang telah membantu dalam pengembangan PerpusExpress.
+* Email: admin@perpus.com
+* Password: password
 
 ---
 
-⭐ Star repository ini jika Anda menyukainya!
+## Fitur Utama
+
+1. **Manajemen Buku**
+
+   * CRUD buku
+   * Kategorisasi
+   * Pencarian
+
+2. **Manajemen Peminjaman**
+
+   * Proses peminjaman
+   * Pengembalian
+   * Perhitungan denda
+
+3. **Manajemen Pengguna**
+
+   * Profil pengguna
+   * Riwayat aktivitas
