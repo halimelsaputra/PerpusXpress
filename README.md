@@ -1,7 +1,3 @@
-Berikut versi README yang sudah saya rapikan dan format dengan markdown agar lebih jelas dan terstruktur:
-
----
-
 # PerpusExpress
 
 ## Nama & NIM
